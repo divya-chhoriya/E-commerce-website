@@ -1,0 +1,347 @@
+*{
+	font-family: Bahnschrift, Helvetica, sans-serif;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+/*---------------------- NAV BAR ------------------------*/
+.navigate {
+	padding: 20px;
+	margin: auto;
+	max-width: 1550px;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navigate a {
+    color: #AC3B61;
+    font-size: 15px;
+	text-align: center;
+	letter-spacing: 2px;
+	padding: 20px 30px;
+	text-decoration: none;
+}
+
+.navigate ul {
+	padding-top: 25px;
+}
+
+.navigate li {
+	padding-bottom: 25px;
+}
+
+.navigate a:hover {
+	background-color: #AC3B61;
+	color: white;
+}
+
+/*---------------------- DROPDOWN FOR NAV BAR ------------------------*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+/*---------------------- Start Section of Home page & Deal Section ------------------------*/
+.intro_section {
+	height: 570px;
+	background: radial-gradient(#b3b3cc,#EEE2DC);
+	font-size: 30px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.text {
+    position: absolute;
+    margin-left: 100px;
+    animation-name: color_change;
+    animation-name: hello;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color_change {
+	0% {color: #123C69;}
+	50% {color: #c4547a;}
+}
+
+
+/*---------------------- Product Category Heading ------------------------*/
+.heading {
+	text-align: center;
+	margin: 0 auto 80px;
+	position: relative;
+	line-height: 60px;
+	color: #123C69;
+	font-size: 28px;
+	font-style: italic;
+}
+.heading::after {
+	content: '';
+	background: #c4547a;
+	width: 120px;
+	height: 5px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.latest_products {
+	max-width: 1000px;
+	margin: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.col1 {
+	flex-basis:33%;  /*since we want 3 columns */
+	padding: 25px;
+	margin-bottom: 20px;
+	min-width: 100px;
+	font-size: 17px;
+}
+
+.col1 img {
+	width: 100%;
+	cursor: pointer;
+}
+
+.col1:hover {
+	transition: 0.5s;
+	transform: scale(1.05);
+	border-style: groove;
+	border-color: #123C69;
+}
+
+
+/*---------------------- Add to Cart button ------------------------*/
+.button_style {
+	border: 1px solid #123C69;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 20px;
+ 	margin: 10px 0px;
+ 	border-radius: 30px;
+ 	display: inline-block;
+ 	transition: background 0.5s;
+}
+
+.button_style:hover {
+	background-color: #123C69;
+	color: white;
+}
+
+.col1 .button_style {
+	transform: translateY(10px);
+	opacity: 0;
+	transition: 0.2s all;
+}
+
+.col1:hover .button_style {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.col2 {
+	flex-basis: 50%;
+	min-width: 100px;
+	padding: 2px;
+}
+.col2 img {
+	max-width: 100%;
+	border-radius: 25%;
+	filter: drop-shadow(5px 5px 5px #123C69);
+	animation-name: hello;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	position: relative;
+}
+
+@keyframes hello {
+	0% {left: 0px;}
+	50% {left: 150px;}
+	100% {left: 0px;}
+}
+
+.col3 {
+	flex-basis:25%;
+	padding: 20px;
+	margin: auto;
+	min-width: 200px;
+}
+.col3 img {
+	width: 25%;
+	filter: grayscale(100%);
+}
+.col3 img:hover {
+	filter: grayscale(0%);
+}
+
+
+.footer {
+	margin-top: 50px;
+	background-color: #0b2541;
+	color: #d9d9d9;
+	font-size: 15px;
+	padding: 60 0 20px;
+}
+.footer h3 {
+	color: white;
+	text-align: center;
+}
+
+.col4 {
+	min-width: 250px;
+	margin-bottom: 20px;
+	flex-basis: 30%;
+	text-align: center;
+}
+.col4 img {
+	width: 100px;
+	padding: 10px;
+}
+
+.col5 {
+	flex-basis:25%;
+	padding: 20px;
+	margin-bottom: 20px;
+	min-width: 100px;
+}
+
+.col5 img {
+	width: 100%;
+	cursor: pointer;
+}
+
+.col5:hover {
+	transition: 0.5s;
+	transform: scale(1.05);
+	border-style: groove;
+	border-color: #123C69;
+}
+
+.col5 .button_style {
+	transform: translateY(10px);
+	opacity: 0;
+	transition: 0.2s all;
+}
+
+.col5:hover .button_style {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+
+
+
+
+/*---------------------------- CART CSS ---------------------------*/
+
+.products-container {
+	max-width: 1300px;
+	justify-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 100px;
+}
+
+.product-header {
+	width: 100%;
+	max-width: 1300px;
+	display: flex;
+	justify-content: space-around;
+	border-bottom: 4px solid lightgrey;
+	margin: auto;
+}
+
+.product-title {
+	width: 50%;
+}
+
+.price {
+	width: 35%;
+	display: flex;
+	align-items: center;
+}
+
+.quantity {
+	width: 45%;
+	display: flex;
+	align-items: right;
+}
+
+.total {
+	width: 20%;
+	display: flex;
+	align-items: center;
+}
+
+.product {
+	width: 75%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 10px 0;
+	border-bottom: 2px solid lightgrey;
+}
+
+.products img {
+	width: 25%;
+}
+
+.products-container i {
+	font-size: 25px;
+	color: red;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.FinalTotalContainer {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	padding: 10px 0;
+}
+
+.finalTitle {
+	width: 30%;
+}
+
+.grandTotal {
+	width: 10%;
+}
+
+.placeOrder {
+	margin: auto;
+	display: flex;
+	padding: 10px 0;
+}
+.placeOrder button {
+	width: 300px;
+	margin: auto;
+	margin-top: 40px;
+}

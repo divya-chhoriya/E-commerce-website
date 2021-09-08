@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Men's Section</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style>
+		html {
+  			scroll-behavior: smooth;
+		}
+	</style>
+</head>
+<body>
+
+	<!---------------- Nav Bar --------------->
+	<div class="navigate" style="background-color: #EEE2DC;">
+		<img src="images\logo.png" height="30" width="35" alt="logo"><strong><i>MyFashion</i></strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		<a href="e-commerce (home).html">Home</a>
+		<div class="dropdown">
+		  <a href="women.html">Women <i class="fa fa-caret-down"></i></a>
+		  <ul class="dropdown-content" style="list-style-type: none;">
+			  <li><a href="women.html #dresses">Dresses</a></li>
+			  <li><a href="women.html #jeans">Jeans</a></li>
+			  <li><a href="women.html #tops">Tops</a></li>
+			  <li><a href="women.html #w-watches">Watches</a></li>
+			  <li><a href="women.html #Accessories">Accessories</a></li>
+			  <li><a href="women.html #w-shoes">Shoes</a></li>
+		  </ul>
+		</div>
+		<div class="dropdown">
+		  <a href="men.html">Men <i class="fa fa-caret-down"></i></a>
+		  <ul class="dropdown-content" style="list-style-type: none;">
+			  <li><a href="men.html #casuals">Casuals</a></li>
+			  <li><a href="men.html #m-watches">Watches</a></li>
+			  <li><a href="men.html #m-shoes">Shoes</a></li>
+		  </ul>
+		</div>
+		<div class="dropdown">
+		  <a href="">Home Decor <i class="fa fa-caret-down"></i></a>
+		  <ul class="dropdown-content" style="list-style-type: none;">
+			  <li><a href="">Clocks</a></li>
+			  <li><a href="">Mirrors</a></li>
+			  <li><a href="">Showpieces&Vases</a></li>
+			  <li><a href="">Aromas&Candles</a></li>
+		  </ul>
+		</div>
+		<div class="dropdown">
+		  <a href="">Electronics <i class="fa fa-caret-down"></i></a>
+		  <ul class="dropdown-content" style="list-style-type: none;">
+			  <li><a href="">TV</a></li>
+			  <li><a href="">Mobile</a></li>
+			  <li><a href="">Laptops</a></li>
+			  <li><a href="">Headphones</a></li>
+			  <li><a href="">Cameras</a></li>
+		  </ul>
+		</div>
+		<div class="dropdown">
+		  <a href="">Groceries <i class="fa fa-caret-down"></i></a>
+		  <ul class="dropdown-content" style="list-style-type: none;">
+			  <li><a href="">Fruits&Vegetables</a></li>
+			  <li><a href="">Bakery & Cakes</a></li>
+			  <li><a href="">Snacks</a></li>
+			  <li><a href="">Care Products</a></li>
+			  <li><a href="">Cleaning&Household</a></li>
+		  </ul>
+		</div>
+		<a href="e-commerce (home).html #contact">Contact</a>
+		<a href="cart.html" class="cart"><i class="fa fa-shopping-cart fa-2x"></i><span>0</span></a>
+	</div>
+
+
+	<div class="container">
+			<!---------------- Modal --------------->
+		<div class="modal fade" id="myModal" role="dialog">
+		    <div class="modal-dialog">    
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			        <div class="modal-header">
+			            <h4 class="modal-title">Product Details</h4>
+			        </div>
+			        <div class="modal-body">
+			            <p id="show">
+			            	
+			            </p>
+			        </div>
+			        <div class="modal-footer">
+			            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="delete_details()">Close</button>
+			        </div>
+			    </div>
+			</div>
+		</div>  
+	</div>
+
+
+	<br>
+	<!---------------- Casuals Section --------------->
+	<div class="latest_products">
+		<p class="heading" id="casuals">Casuals</p>
+		<p style="color: #123C69; font-size: 22px; font-style: italic;">Check out our new products</p><br>
+		<div class="row">
+			<div class="col5">
+				<img src="images\shirt1.png" id="0" data-toggle="modal" data-target="#myModal" onclick="show_details_men(this.id)">
+					<p>Men Maroon Printed Round Neck T-shirt</p>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star-half-o"></i>
+					<p>&#8377 329.00 <span style="text-decoration: line-through;"> &#8377 599.00</span><span style="color: orange"> (45% OFF)</span></p>
+					<button type="button" class="button_style add-men-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>
+			</div>
+			<div class="col5">
+				<img src="images\shirt2.png" id="1" data-toggle="modal" data-target="#myModal" onclick="show_details_men(this.id)">
+				<p>Men Blue Colourblocked Round Neck T-shirt</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 474.00 <span style="text-decoration: line-through;"> &#8377 949.00</span><span style="color: orange"> (50% OFF)</span></p>
+				<button type="button" class="button_style add-men-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>
+			</div>
+			<div class="col5">
+				<img src="images\shirt4.png" id="2" data-toggle="modal" data-target="#myModal" onclick="show_details_men(this.id)">
+				<p>Men Teal Blue Printed T-shirt</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 419.00 <span style="text-decoration: line-through;"> &#8377 699.00</span><span style="color: orange"> (40% OFF)</span></p>
+				<button type="button" class="button_style add-men-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>
+			</div>
+			<div class="col5">
+				<img src="images\shirt5.png" id="3" data-toggle="modal" data-target="#myModal" onclick="show_details_men(this.id)">
+				<p>Men Navy Blue Colourblocked Round Neck T-shirt</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 449.00 <span style="text-decoration: line-through;"> &#8377 899.00</span><span style="color: orange"> (50% OFF)</span></p>
+				<button type="button" class="button_style add-men-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>
+			</div>
+			<div class="col5">
+				<img src="images\shirt7.png" id="4" data-toggle="modal" data-target="#myModal" onclick="show_details_men(this.id)">
+				<p>Men Green Printed Round Neck T-shirt</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-half-o"></i>
+				<p>&#8377 494.00 <span style="text-decoration: line-through;"> &#8377 1,099.00</span><span style="color: orange"> (55% OFF)</span></p>
+				<button type="button" class="button_style add-men-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>
+			</div>
+			<div class="col5">
+				<img src="images\shirt8.png" id="5" data-toggle="modal" data-target="#myModal" onclick="show_details_men(this.id)">
+				<p>Men Yellow & Green Printed Round Neck T-shirt</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-half-o"></i>
+				<p>&#8377 494.00 <span style="text-decoration: line-through;"> &#8377 1,499.00</span><span style="color: orange"> (67% OFF)</span></p>
+				<button type="button" class="button_style add-men-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>
+			</div>
+		</div>
+	</div>
+
+	<!---------------- Watches Section --------------->
+	<div class="latest_products">
+		<p class="heading" id="m-watches">Watches</p>
+		<div class="row">
+			<div class="col5">
+				<img src="images\men-watch1.png" id="6" data-toggle="modal" data-target="#myModal" onclick="show_details_men(this.id)">
+					<p>Premium Men Coffee Brown Analogue Watch</p>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star-o"></i>
+					<p>&#8377 2,295.00 <span style="text-decoration: line-through;"> &#8377 5,100.00</span><span style="color: orange"> (55% OFF)</span></p>
+					<button type="button" class="button_style add-men-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>
+			</div>
+			<div class="col5">
+				<img src="images\men-watch2.png" id="7" data-toggle="modal" data-target="#myModal" onclick="show_details_men(this.id)">
+				<p>Men Grey Analogue Watch WRG00040C</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 1,715.00 <span style="text-decoration: line-through;"> &#8377 3,299.00</span><span style="color: orange"> (48% OFF)</span></p>
+				<button type="button" class="button_style add-men-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>
+			</div>
+			<div class="col5">
+				<img src="images\men-watch3.png" id="8" data-toggle="modal" data-target="#myModal" onclick="show_details_men(this.id)">
+				<p>Men Blue Analogue WRG00042C</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-half-o"></i>
+				<p>&#8377 1099.00</p>
+				<button type="button" class="button_style add-men-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>
+			</div>
+		</div>
+	</div>
+
+	<!---------------- Shoes Section --------------->
+	<div class="latest_products">
+		<p class="heading" id="m-shoes">Shoes</p>
+		<div class="row">
+			<div class="col5">
+				<img src="images\men-shoes1.png" id="9" data-toggle="modal" data-target="#myModal" onclick="show_details_men(this.id)">
+					<p>Grey & Navy Blue Colour PU Sneakers</p>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star-half-o"></i>
+					<p>&#8377 4,599.00</p>
+					<button type="button" class="button_style add-men-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>
+			</div>
+			<div class="col5">
+				<img src="images\men-shoes2.png" id="10" data-toggle="modal" data-target="#myModal" onclick="show_details_men(this.id)">
+				<p>Men Khaki Green Slip-On Trainers</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 1,499.00</p>
+				<button type="button" class="button_style add-men-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>
+			</div>
+			<div class="col5">
+				<img src="images\men-shoes3.png" id="11" data-toggle="modal" data-target="#myModal" onclick="show_details_men(this.id)">
+				<p>Men Navy Sneakers</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 2,099.00 <span style="text-decoration: line-through;"> &#8377 2,999.00</span><span style="color: orange"> (30% OFF)</span></p>
+				<button type="button" class="button_style add-men-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>
+			</div>
+			<div class="col5">
+				<img src="images\men-shoes4.png" id="12" data-toggle="modal" data-target="#myModal" onclick="show_details_men(this.id)">
+				<p>Men Grey Textured Loafers</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 2,339.00</p>
+				<button type="button" class="button_style add-men-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>
+			</div>
+		</div>
+	</div>
+
+
+	<!---------------- Footer --------------->
+	<div class="footer">
+		<div class="row">
+			<div class="col4"><br>
+				<h3>Download Our App</h3><br>
+				<p>Download App for Android and ios phone</p>
+				<a href="https://play.google.com/"><img src="images\android.png"></a>
+				<a href="https://www.apple.com/in/app-store/"><img src="images\ios.png"></a>
+			</div>
+			<div class="col4"><br>
+				<h3>Features</h3><br>
+				<ul type="none">
+					<li>Return Policy</li>
+					<li>24/7 Support</li>
+					<li>Coupons</li>
+					<li>Join Affiliate</li>
+				</ul>
+			</div>
+			<div class="col4"><br>
+				<h3>Connect Us</h3><br>
+				<ul type="none">
+					<li><a style="color: #d9d9d9" href="https://www.facebook.com/">Facebook</a></li>
+					<li><a style="color: #d9d9d9" href="https://twitter.com/?lang=en">Twitter</a></li>
+					<li><a style="color: #d9d9d9" href="https://www.youtube.com/">YouTube</a></li>
+					<li><a style="color: #d9d9d9" href="https://www.instagram.com/">Instagram</a></li>
+				</ul>
+			</div>
+		</div>
+		<hr style="height:1.5px;border-width:0;background-color:#AC3B61;margin-left: 100px;margin-right: 100px;"><br>
+		<p style="text-align: center;font-style: italic;">Copyright 2021 - DC</p><br>
+	</div>
+
+	<script src="main.js"></script>
+</body>
+</html>
