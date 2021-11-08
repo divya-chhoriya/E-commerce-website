@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<style>
+		a {
+			text-decoration: none;
+			font-size: 17px;
+			cursor: pointer;
+		}
+		span {
+			color: white;
+			cursor: pointer;
+			display: inline-block;
+			padding: 0 10px;
+		}
+		input {
+			width: 300px;
+			height: 40px;
+			outline: none;
+		}
+	</style>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+	<div class="navigate">
+		<img src="images\logo.png" height="40" width="45" alt="logo"><strong><i><span style="font-size: 25px; color: #123C69">MyFashion</span></i></strong>
+	</div>
+	<div class="container1">
+	  <img src="sale1.jpg" style="width: 100%;height: 700px;opacity: 0.6;margin-bottom: 0px">
+	  <div class="login"><br>
+	  	<div>
+	  	   <span onclick="Login()" id="exist" style="background-color: #123C69">Existing account</span> | 
+	  	   <span onclick="Signup()" id="newacc">Create new account</span>
+	  	</div><br><br>
+	  	<form id="existing_acc" action="checking_values.php" method="post">
+	  		<h3 style="color: white">Login</h3><br>
+		  	<input type="text" name="user" id="user" placeholder="Username" required><br><br>
+		  	<input type="password" name="pass" id="pass" placeholder="Password" required><br><br>
+		  	<button class="button_style" id="check_login" name="check_login">Login</button><br><br>
+		  	<a style="color: white" onclick="sendddemail()"><i>forgot password?</i></a><br><br><br>
+	  	</form>
+
+	  	<form id="new_acc" style="display: none;" action="login.php" method="post">
+	  		<h3 style="color: white">Sign Up</h3><br>
+		  	<input type="text" name="username" id="username" placeholder="Username" required><br><br>
+		  	<input type="password" name="password" id="password" placeholder="Password" required><br><br>
+		  	<input type="email" name="email" id="mail" placeholder="E-mail" required><br><br>
+		  	<button class="button_style" id="check_signup" name="check_signup" onclick="sign()">Sign up</button><br>
+	  	</form>
+	  </div>
+	</div>
+
+	<script src="login.js"></script>
+</body>
+</html>
