@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Women's Section</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style>
+		html {
+  			scroll-behavior: smooth;
+		}
+	</style>
+</head>
+<body>
+
+	<!---------------- Nav Bar --------------->
+	<div class="navigate" style="background-color: #EEE2DC">
+		<img src="images\logo.png" height="40" width="45" alt="logo"><strong><i><span style="font-size: 25px; color: #123C69">MyFashion</span></i></strong>&emsp;&emsp;&emsp;
+		<a href="e-commerce (home).html">Home</a>
+		<div class="dropdown">
+		  <a href="women.html">Women <i class="fa fa-caret-down"></i></a>
+		  <ul class="dropdown-content" style="list-style-type: none;">
+			  <li><a href="women.html #dresses">Dresses</a></li>
+			  <li><a href="women.html #jeans">Jeans</a></li>
+			  <li><a href="women.html #tops">Tops</a></li>
+			  <li><a href="women.html #w-watches">Watches</a></li>
+			  <li><a href="women.html #Accessories">Accessories</a></li>
+			  <li><a href="women.html #w-shoes">Shoes</a></li>
+		  </ul>
+		</div>
+		<div class="dropdown">
+		  <a href="men.html">Men <i class="fa fa-caret-down"></i></a>
+		  <ul class="dropdown-content" style="list-style-type: none;">
+			  <li><a href="men.html #casuals">Casuals</a></li>
+			  <li><a href="men.html #m-watches">Watches</a></li>
+			  <li><a href="men.html #m-shoes">Shoes</a></li>
+		  </ul>
+		</div>
+		<div class="dropdown">
+		  <a href="home_decor.html">Home Decor <i class="fa fa-caret-down"></i></a>
+		  <ul class="dropdown-content" style="list-style-type: none;">
+			  <li><a href="home_decor.html #clock">Clocks</a></li>
+			  <li><a href="home_decor.html #mirror">Mirrors</a></li>
+			  <li><a href="home_decor.html #showpieces">Showpieces&Vases</a></li>
+			  <li><a href="home_decor.html #aromas">Aromas&Candles</a></li>
+		  </ul>
+		</div>
+		<a href="cart.html" class="cart"><i class="fa fa-shopping-cart fa-2x"></i><span>0</span></a>
+        <div class="dropdown">
+		  <a href="#"><i class="fa fa-user fa-2x"></i></a>
+		  <ul class="dropdown-content" style="list-style-type: none;">
+			  <li><a href="wishlist.html">Wishlist</a></li>
+			  <li><a href="login_home.html" onclick="logout()">Logout</a></li>
+		  </ul>
+		</div>
+	</div>
+
+
+	<div class="container">
+			<!---------------- Modal --------------->
+		<div class="modal fade" id="myModal" role="dialog">
+		    <div class="modal-dialog">    
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			        <div class="modal-header">
+			            <h4 class="modal-title">Product Details</h4>
+			        </div>
+			        <div class="modal-body">
+			            <p id="show">
+			            	
+			            </p>
+			        </div>
+			        <div class="modal-footer">
+			            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="delete_details()">Close</button>
+			        </div>
+			    </div>
+			</div>
+		</div>  
+	</div>
+
+
+	<br>
+
+	<!---------------- Dress Section --------------->
+	<div class="latest_products">
+		<p class="heading" id="dresses">Dresses</p>
+		<p style="color: #123C69; font-size: 22px; font-style: italic;">Check out our new products</p><br>
+		<div class="row">
+			<div class="col5">
+				<img src="images\dress3.png" id="0" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+					<p>Calm Mauve Puff Sleeves Wrap Dress</p>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star-half-o"></i>
+					<p>&#8377 999.00 <span style="text-decoration: line-through;"> &#8377 1,999.00</span><span style="color: orange"> (50% OFF)</span></p>
+					<button class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\dress7.png" id="1" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Red & White Printed Jumpsuit & Belt</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 1,049.00 <span style="text-decoration: line-through;"> &#8377 1,499.00</span><span style="color: orange"> (30% OFF)</span></p>
+				<button class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\dress8.png" id="2" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Blue Solid Denim Jacket</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-half-o"></i>
+				<p>&#8377 799.00 <span style="text-decoration: line-through;"> &#8377 1,599.00</span><span style="color: orange"> (50% OFF)</span></p>
+				<button class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\dress9.png" id="3" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Maroon Solid Tiered Maxi Dress</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 769.00 <span style="text-decoration: line-through;"> &#8377 2,199.00</span><span style="color: orange"> (65% OFF)</span></p>
+				<button class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\dress10.png" id="4" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Pink & Orange Floral Printed A-Line Dress</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 849.00 <span style="text-decoration: line-through;"> &#8377 1,699.00</span><span style="color: orange"> (50% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\dress11.png" id="5" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Black & Rust Orange Floral Print Tiered Midi Fit & Flare Dress</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-half-o"></i>
+				<p>&#8377 2,459.00</p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!---------------- Jeans Section --------------->
+	<div class="latest_products">
+		<p class="heading" id="jeans">Jeans</p>
+		<div class="row">
+			<div class="col5">
+				<img src="images\jeans5.png" id="6" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Blue Pure Cotton Relaxed High-Rise Jeans</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 959.00 <span style="text-decoration: line-through;"> &#8377 1,999.00</span><span style="color: orange"> (52% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\jeans9.png" id="7" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Blue Boyfriend Fit High-Rise Clean Look Stretchable Jeans</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<i class="fa fa-star-half-o"></i>
+				<p>&#8377 1,099.00 <span style="text-decoration: line-through;"> &#8377 2,199.00</span><span style="color: orange"> (50% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\jeans10.png" id="8" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Green Regular Fit High-Rise Clean Look Stretchable Jeans</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 799.00 <span style="text-decoration: line-through;"> &#8377 1,999.00</span><span style="color: orange"> (60% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\jeans11.png" id="9" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Blue Wide Leg Mid-Rise Clean Look Jeans</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 1,199.00 <span style="text-decoration: line-through;"> &#8377 1,999.00</span><span style="color: orange"> (40% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!---------------- Tops Section --------------->
+	<div class="latest_products">
+		<p class="heading" id="tops">Tops</p>
+		<div class="row">
+			<div class="col5">
+				<img src="images\top3.png" id="10" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+					<p>Women Mauve Dobby Weave A-Line Top</p>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star-o"></i>
+					<p>&#8377 719.00 <span style="text-decoration: line-through;"> &#8377 1,799.00</span><span style="color: orange"> (60% OFF)</span></p>
+					<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\top4.png" id="11" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Yellow Self Design Pure Cotton Top</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 649.00 <span style="text-decoration: line-through;"> &#8377 1,299.00</span><span style="color: orange"> (50% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\top5.png" id="12" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Black Solid Victorian Crop Fitted Top</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-half-o"></i>
+				<p>&#8377 695.00 <span style="text-decoration: line-through;"> &#8377 1,390.00</span><span style="color: orange"> (50% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\top6.png" id="13" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Blue Sweetheart Neck Puff Sleeves Chiffon Regular Crop Top</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 1,049.00 <span style="text-decoration: line-through;"> &#8377 1,499.00</span><span style="color: orange"> (30% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\top7.png" id="14" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Burgundy Crepe Blouson Top</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 529.00 <span style="text-decoration: line-through;"> &#8377 999.00</span><span style="color: orange"> (47% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\top8.png" id="15" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Beige & Rust Brown Floral Print Blouson Top</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-half-o"></i>
+				<p>&#8377 764.00 <span style="text-decoration: line-through;"> &#8377 1,699.00</span><span style="color: orange"> (55% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<!---------------- Watches Section --------------->
+	<div class="latest_products">
+		<p class="heading" id="w-watches">Watches</p>
+		<div class="row">
+			<div class="col5">
+				<img src="images\women-watch1.png" id="16" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+					<p>Women Mauve Analogue Watch</p>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star-o"></i>
+					<p>&#8377 1,549.00 <span style="text-decoration: line-through;"> &#8377 3,099.00</span><span style="color: orange"> (50% OFF)</span></p>
+					<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\women-watch2.png" id="17" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Rose Gold-Tonex Izzy Analogue Watch ES4782</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 10,995.00</p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\women-watch5.png" id="18" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Teal Green Analogue Watch</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 1,249.00 <span style="text-decoration: line-through;"> &#8377 2,499.00</span><span style="color: orange"> (50% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\women-watch6.png" id="19" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Navy Blue Analogue Watch DK11421-7</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 1,312.00 <span style="text-decoration: line-through;"> &#8377 3,750.00</span><span style="color: orange"> (65% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<!---------------- Accessories Section --------------->
+	<div class="latest_products">
+		<p class="heading" id="Accessories">Accessories</p>
+		<div class="row">
+			<div class="col5">
+				<img src="images\jewellery1.png" id="20" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+					<p>Rose Gold Plated Circular Drop Earrings</p>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star-o"></i>
+					<p>&#8377 298.00 <span style="text-decoration: line-through;"> &#8377 1,490.00</span><span style="color: orange"> (80% OFF)</span></p>
+					<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\jewellery2.png" id="21" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Gold-Toned Rhinestone-Studded Necklace</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 232.00 <span style="text-decoration: line-through;"> &#8377 290.00</span><span style="color: orange"> (20% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\jewellery3.png" id="22" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Set of 4 Gold-Plated Bracelets</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 384.00 <span style="text-decoration: line-through;"> &#8377 699.00</span><span style="color: orange"> (45% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\jewellery4.png" id="23" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Gold-Toned Floral-Shaped Drop Earrings</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 179.00 <span style="text-decoration: line-through;"> &#8377 599.00</span><span style="color: orange"> (70% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\jewellery5.png" id="24" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Silver-Plated & Pink Oxidised Jhumkas</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 999.00</p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<!---------------- Shoes/Sandals Section --------------->
+	<div class="latest_products">
+		<p class="heading" id="w-shoes">Shoes/Sandals</p>
+		<div class="row">
+			<div class="col5">
+				<img src="images\women-shoes3.png" id="25" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Beige Solid One Toe Flats</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-half-o"></i>
+				<p>&#8377 1,346.00 <span style="text-decoration: line-through;"> &#8377 1,795.00</span><span style="color: orange"> (25% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\women-shoes5.png" id="26" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Off-White Striped Ikat Mules</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 1,044.00 <span style="text-decoration: line-through;"> &#8377 1,899.00</span><span style="color: orange"> (45% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\women-shoes8.png" id="27" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Lavender Solid Sneakers</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-half-o"></i>
+				<p>&#8377 1,149.00 <span style="text-decoration: line-through;"> &#8377 2,299.00</span><span style="color: orange"> (50% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\women-shoes9.png" id="28" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women White Colourblocked PU Sneakers</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-half-o"></i>
+				<p>&#8377 799.00 <span style="text-decoration: line-through;"> &#8377 1,599.00</span><span style="color: orange"> (50% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+			<div class="col5">
+				<img src="images\women-shoes10.png" id="29" data-toggle="modal" data-target="#myModal" onclick="show_details_women(this.id)">
+				<p>Women Pink & White Sneakers</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-half-o"></i>
+				<p>&#8377 2,219.00 <span style="text-decoration: line-through;"> &#8377 3,699.00</span><span style="color: orange"> (40% OFF)</span></p>
+				<button type="button" class="button_style add-women-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+					<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist2" onclick="alert('Added to wishlist')"></i>
+					</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!---------------- Footer--------------->
+	<div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                        	<li><a href="#">Best quality products</a></li>
+                            <li><a href="#">World wide shipping</a></li>
+                            <li><a href="#">Easy 30 days return</a></li>
+                            <li><a href="#">Money back guarantee</a></li>
+                            <li><a href="#">Delivery in 7 days</a></li>
+                        </ul><br>
+                    </div>
+                    <div class="col-md-3 item">
+                        <h3>Contact Info</h3>
+                        <ul style="opacity:0.6;">
+                        	<li><a href=""><i class="fa fa-map-marker fa-2x"></i></a>&emsp; MyFashion - Fashion store, Paris</li><br>
+                            <li><a href=""><i class="fa fa-envelope fa-2x"></i></a>&emsp;myfashion@company.com</li><br>
+                            <li><a href=""><i class="fa fa-phone fa-2x"></i></a>&emsp;111-111-1111</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 item text">
+                    	<br>
+                        <h3>MyFashion</h3>
+                        <p style="opacity:0.6;margin-bottom:0;">Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p><br>
+                    </div>
+                    <div class="col item social">
+                    	<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                    	<a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                    	<a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div><br>
+                <p style="opacity:0.3;text-align: center;font-style: italic;">Copyright 2021 - DC</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="login.js"></script>
+	<script src="main.js"></script>
+
+</body>
+</html>

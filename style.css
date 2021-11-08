@@ -1,0 +1,687 @@
+*{
+	font-family: Bahnschrift, Helvetica, sans-serif;
+	margin: 0;
+	box-sizing: border-box;  /*includes padding and margin*/
+}
+
+
+/*---------------------- NAV BAR ------------------------*/
+.navigate {
+	padding: 20px;
+	margin: auto;
+	max-width: 1550px;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);  
+    width: 100%;
+}
+
+.navigate a {
+    color: #AC3B61;
+    font-size: 15px;
+	text-align: center;
+	letter-spacing: 2px;
+	padding: 20px 30px;
+	text-decoration: none;
+}
+
+.navigate ul {
+	padding-top: 25px;
+}
+
+.navigate li {
+	padding-bottom: 25px;
+}
+
+.navigate a:hover {
+	background-color: #AC3B61;
+	color: white;
+}
+
+/*---------------------- DROPDOWN FOR NAV BAR ------------------------*/
+.dropdown {
+  position: relative;
+  display: inline-block;  /*display list items horizontally instead of vertically */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/*---------------------------------------Login----------------------------------------------*/
+.container1 {
+  position: relative;
+  text-align: center;
+  font-family: Segoe Print;
+  background-color: black;
+}
+
+.login {
+	background-color: transparent;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 500px;
+	padding: 20px 0;
+	box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
+	transform: translate(-50%, -50%); 
+	z-index: 99;
+}
+
+input {
+	width: 300px;
+	height: 40px;
+}
+
+
+/*---------------------------------------------Carroussel-------------------------------------------------*/
+
+#slider{
+    overflow: hidden;
+}
+
+#slider figure{
+    position: relative;
+    width:500%;
+    margin:0px;
+    left:0px;
+    animation: 20s slider infinite;
+}
+
+#slider figure img{
+    width:20%;
+    float: left;
+}
+
+@keyframes slider{
+    0% {
+        left:0;
+    }
+    20%{
+        left:0;
+    }
+    25%{
+        left:-100%;
+    }
+    45%{
+        left:-100%;
+    }
+    50%{
+        left:-200%;
+    }
+    70%{
+        left:-200%;
+    }
+    75%{
+        left:-300%;
+    }
+    95%{
+        left:-300%;
+    }
+    100%{
+        left:-400%;
+    }
+}
+
+
+
+/*---------------------- Start Section of Home page & Deal Section ------------------------*/
+.intro_section {
+	height: 570px;
+	background: radial-gradient(#b3b3cc,#EEE2DC);
+	font-size: 30px;
+	display: flex;   /*A flex container expands items to fill available free space or shrinks them to prevent overflow*/
+	align-items: center;
+	flex-wrap: wrap;  /*specifies whether the flexible items should wrap or not*/
+}
+
+.text {
+    position: absolute;
+    margin-left: 100px;
+}
+
+
+/*---------------------- Product Category Heading ------------------------*/
+.heading {
+	text-align: center;
+	margin: 0 auto 80px;
+	position: relative;
+	line-height: 60px;
+	color: #123C69;
+	font-size: 28px;
+	font-style: italic;
+}
+.heading::after {
+	content: '';
+	background: #c4547a;
+	width: 120px;
+	height: 5px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.latest_products {
+	max-width: 1000px;
+	margin: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.col1 {
+	flex-basis:33%;  /*since we want 3 columns */
+	padding: 25px;
+	margin-bottom: 20px;
+	min-width: 100px;
+	font-size: 17px;
+}
+
+.col1 img {
+	width: 100%;
+	cursor: pointer;
+}
+
+.col1:hover {
+	transition: 0.5s;
+	transform: scale(1.05);
+	border-style: groove;
+	border-color: #123C69;
+}
+
+/*---------------Wishlist--------------*/
+.wishlist {
+	cursor: pointer;
+	display: inline-block;
+ 	transition: background 0.5s;
+ 	color: #123C69;
+}
+
+.col1 .wishlist {
+	transform: translateY(10px);
+	opacity: 0;
+	transition: 0.2s all;
+}
+
+.col1:hover .wishlist {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+
+/*---------------------- Add to Cart button ------------------------*/
+.button_style {
+	border: 1px solid #123C69;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 20px;
+ 	margin: 10px 0px;
+ 	border-radius: 30px;
+ 	display: inline-block;
+ 	transition: background 0.5s;
+}
+
+.button_style:hover {
+	background-color: #123C69;
+	color: white;
+}
+
+.col1 .button_style {
+	transform: translateY(10px);
+	opacity: 0;
+	transition: 0.2s all;
+}
+
+.col1:hover .button_style {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.col2 {
+	flex-basis: 50%;
+	min-width: 100px;
+	padding: 2px;
+}
+.col2 img {
+	max-width: 100%;
+	border-radius: 25%;
+	filter: drop-shadow(5px 5px 5px #123C69);  /*defines visual effects (like blur and saturation)*/  /*blur, brightness, contrast*/
+	padding-left: 150px;
+}
+
+/*
+.col3 {
+	flex-basis:25%;
+	padding: 20px;
+	margin: auto;
+	min-width: 200px;
+}
+.col3 img {
+	width: 25%;
+	filter: grayscale(100%);
+}
+.col3 img:hover {
+	filter: grayscale(0%);
+}
+*/
+
+section {
+	min-height: 200px;
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;  /*specifies the direction of the flexible items*/
+	align-items: center;
+	box-sizing: border-box;
+	padding-bottom: 60px;
+}
+
+
+.faq {
+	max-width: 700px;
+	margin-top: 32px;
+	padding-bottom: 16px;
+	border-bottom: 2px solid black;
+	cursor: pointer;
+}
+
+.question {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.ans {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 1s ease;  /*transition effect with a slow start, then fast, then end slowly*/
+}
+
+.ans p{
+	padding-top: 16px;
+	line-height: 1.6;
+}
+
+.faq.active .ans {
+	max-height: 300px;
+	animation: fade 0.5s ease-in-out; /*transition effect with a slow start and end*/
+}
+
+.faq.active svg {
+	transform: rotate(180deg);
+}
+
+svg {
+	transition: transform 0.5s ease-in;  /*transition effect with a slow start*/
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+.footer-dark {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color:#0b2541;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social a:hover {
+  opacity:0.9;
+  color: #AC3B61;
+}
+
+.col5 {
+	flex-basis:25%;
+	padding: 20px;
+	margin-bottom: 20px;
+	min-width: 100px;
+}
+
+.col5 img {
+	width: 100%;
+	cursor: pointer;
+}
+
+.col5:hover {
+	transition: 0.5s;
+	transform: scale(1.05);
+	border-style: groove;
+	border-color: #123C69;
+}
+
+.col5 .button_style {
+	transform: translateY(10px);
+	opacity: 0;
+	transition: 0.2s all;
+}
+
+.col5:hover .button_style {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+
+.col5 .wishlist {
+	transform: translateY(10px);
+	opacity: 0;
+	transition: 0.2s all;
+}
+
+.col5:hover .wishlist {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+
+/*---------------------------- CART CSS ---------------------------*/
+
+.products-container {
+	max-width: 1300px;
+	justify-content: space-around;  /*Items will have space before, between, and after them*/
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 100px;
+}
+
+.product-header {
+	width: 100%;
+	max-width: 1300px;
+	display: flex;
+	justify-content: space-around;
+	border-bottom: 4px solid lightgrey;
+	margin: auto;
+}
+
+.product-title {
+	width: 50%;
+}
+
+.price {
+	width: 35%;
+	display: flex;
+	align-items: center;
+}
+
+.quantity {
+	width: 45%;
+	display: flex;
+	align-items: right;
+}
+
+.total {
+	width: 20%;
+	display: flex;
+	align-items: center;
+}
+
+.product {
+	width: 75%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 10px 0;
+	border-bottom: 2px solid lightgrey;
+}
+
+.products img {
+	width: 25%;
+}
+
+.products-container i {
+	font-size: 25px;
+	color: red;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.FinalTotalContainer {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	padding: 10px 0;
+}
+
+.finalTitle {
+	width: 30%;
+}
+
+.grandTotal {
+	width: 10%;
+}
+
+.buyNow {
+	margin: auto;
+	display: flex;
+	padding: 10px 0;
+}
+.buyNow button {
+	width: 300px;
+	margin: auto;
+	margin-top: 40px;
+}
+
+/*------------------------------Buy Now----------------------------*/
+#totalBill
+{
+    width: 200px;
+	margin: 50px;
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(35, 17, 136);
+    color: white;
+    border-radius: 12px;
+}
+#payment
+{
+    width: 200px;
+	margin: 50px;
+    padding: 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(197, 19, 93);
+    border-radius: 12px;
+}
+#label
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.rad
+{
+    margin: 10px;
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+input[type=radio] {
+    padding: 0px;
+    width: 10%;
+    height: 15px;
+}
+
+
+/*--------------------------Pay Now--------------------------------*/
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  /*position: fixed;*/
+  /*bottom: 23px;*/
+  /*right: 28px;*/
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  text-align: center;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/*-----------------------Pay Now Pop Up-------------------------*/
+#overlay1 {
+    position:relative;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity:0;
+    display:none;
+}
+
+#container2 {
+    position:relative;
+    top:30%;
+    left:50%;
+    margin-left:-200px;
+    width: 400px;
+    height:250px;
+    background-color:#111;
+    padding:5px;
+    border-radius:4px;
+    color:#FFF;
+}
