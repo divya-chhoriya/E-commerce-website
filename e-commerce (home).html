@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyFashion</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style>
+		html {
+  			scroll-behavior: smooth;
+		}
+	</style>
+</head>
+<body>
+	<!---------------- Nav Bar --------------->
+	<div class="navigate">
+		<img src="images\logo.png" height="40" width="45" alt="logo"><strong><i><span style="font-size: 25px; color: #123C69">MyFashion</span></i></strong>&emsp;&emsp;&emsp;
+		<a href="e-commerce (home).html">Home</a>
+		<div class="dropdown">
+		  <a href="women.html">Women <i class="fa fa-caret-down"></i></a>
+		  <ul class="dropdown-content" style="list-style-type: none;">
+			  <li><a href="women.html #dresses">Dresses</a></li>
+			  <li><a href="women.html #jeans">Jeans</a></li>
+			  <li><a href="women.html #tops">Tops</a></li>
+			  <li><a href="women.html #w-watches">Watches</a></li>
+			  <li><a href="women.html #Accessories">Accessories</a></li>
+			  <li><a href="women.html #w-shoes">Shoes</a></li>
+		  </ul>
+		</div>
+		<div class="dropdown">
+		  <a href="men.html">Men <i class="fa fa-caret-down"></i></a>
+		  <ul class="dropdown-content" style="list-style-type: none;">
+			  <li><a href="men.html #casuals">Casuals</a></li>
+			  <li><a href="men.html #m-watches">Watches</a></li>
+			  <li><a href="men.html #m-shoes">Shoes</a></li>
+		  </ul>
+		</div>
+		<div class="dropdown">
+		  <a href="home_decor.html">Home Decor <i class="fa fa-caret-down"></i></a>
+		  <ul class="dropdown-content" style="list-style-type: none;">
+			  <li><a href="home_decor.html #clock">Clocks</a></li>
+			  <li><a href="home_decor.html #mirror">Mirrors</a></li>
+			  <li><a href="home_decor.html #showpieces">Showpieces&Vases</a></li>
+			  <li><a href="home_decor.html #aromas">Aromas&Candles</a></li>
+		  </ul>
+		</div>
+		<a href="cart.html" class="cart"><i class="fa fa-shopping-cart fa-2x"></i><span>0</span></a>
+        <div class="dropdown">
+		  <a href="#"><i class="fa fa-user fa-2x"></i></a>
+		  <ul class="dropdown-content" style="list-style-type: none;">
+			  <li><a href="wishlist.html">Wishlist</a></li>
+			  <li><a href="login_home.html" onclick="logout()">Logout</a></li>
+		  </ul>
+		</div>
+	</div>
+
+    <!--Carrouseel--------------------------->
+    <div id='slider'>
+    <figure> 
+        <img src='images/Watch.png'>
+        <img src='images/crazy.png'>
+        <img src='images/Light.png'>
+        <img src='images/Watch.png'>
+        <img src='images/Light.png'>
+
+    </figure>
+</div>
+
+
+	<div class="container">
+			<!---------------- Modal --------------->
+		<div class="modal fade" id="myModal" role="dialog">
+		    <div class="modal-dialog">    
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			        <div class="modal-header">
+			            <h4 class="modal-title">Product Details</h4>
+			        </div>
+			        <div class="modal-body">
+			            <p id="show">
+			            	
+			            </p>
+			        </div>
+			        <div class="modal-footer">
+			            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="delete_details()">Close</button>
+			        </div>
+			    </div>
+			</div>
+		</div>  
+	</div>
+
+
+	<!---------------- MyFashion Specials Products --------------->
+    <br>
+	<div class="latest_products">
+		<p class="heading">MyFashion specials</p>
+		<div class="row">
+			<div class="col1">
+				<img src="images\dress4.png" id="0" data-toggle="modal" data-target="#myModal" onclick="show_details_latest(this.id)">
+					<p>Pink Shoulders Tulip Hem Wrap Dress</p>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star-half-o"></i>
+					<p>&#8377 999.00 <span style="text-decoration: line-through;"> &#8377 1,999.00</span><span style="color: orange"> (50% OFF)</span></p>
+					<button class="button_style add-latest-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+                    <div class="wishlist">
+                            <i class="fa fa-thumbs-up add-wishlist" onclick="alert('Added to wishlist')"></i>
+                    </div>
+			</div>
+			<div class="col1">
+				<img src="images\dress5.png" id="1" data-toggle="modal" data-target="#myModal" onclick="show_details_latest(this.id)">
+				<p>Jumpsuit With Belt</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 1,099.00 <span style="text-decoration: line-through;"> &#8377 1,999.00</span><span style="color: orange"> (45% OFF)</span></p>
+				<button type="button" class="button_style add-latest-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+                <div class="wishlist">
+                        <i class="fa fa-thumbs-up add-wishlist" onclick="alert('Added to wishlist')"></i>
+                </div>
+			</div>
+			<div class="col1">
+				<img src="images\top2.png" id="2" data-toggle="modal" data-target="#myModal" onclick="show_details_latest(this.id)">
+				<p>Bold Blue Power Shoulders Top</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-half-o"></i>
+				<p>&#8377 675.00 <span style="text-decoration: line-through;"> &#8377 1,299.00</span><span style="color: orange"> (48% OFF)</span></p>
+				<button type="button" class="button_style add-latest-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>
+                &emsp;
+				<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist" onclick="alert('Added to wishlist')"></i>
+				</div>
+			</div>
+			<div class="col1">
+				<img src="images\dress6.png" id="3" data-toggle="modal" data-target="#myModal" onclick="show_details_latest(this.id)">
+				<p>Floral Printed Cropped Jumpsuit</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 899.00 <span style="text-decoration: line-through;"> &#8377 1,999.00</span><span style="color: orange"> (55% OFF)</span></p>
+				<button type="button" class="button_style add-latest-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+				<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist" onclick="alert('Added to wishlist')"></i>
+				</div>
+			</div>
+			<div class="col1">
+				<img src="images\top1.png" id="4" data-toggle="modal" data-target="#myModal" onclick="show_details_latest(this.id)">
+				<p>White Solid Top</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-o"></i>
+				<p>&#8377 699.00 <span style="text-decoration: line-through;"> &#8377 1,399.00</span><span style="color: orange"> (50% OFF)</span></p>
+				<button type="button" class="button_style add-latest-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+				<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist" onclick="alert('Added to wishlist')"></i>
+				</div>
+			</div>
+			<div class="col1">
+				<img src="images\jeans1.png" id="5" data-toggle="modal" data-target="#myModal" onclick="show_details_latest(this.id)">
+				<p>Blue Skinny Fit Mid-Rise Cropped Jeans</p>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-half-o"></i>
+				<p>&#8377 702.00</p>
+				<button type="button" class="button_style add-latest-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+				<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist" onclick="alert('Added to wishlist')"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!---------------- Deals --------------->
+	<div class="intro_section">
+		<div class="col2">
+			<img src="images\women-watch3.png" id="6" data-toggle="modal" data-target="#myModal" onclick="show_details_latest(this.id)">
+		</div>
+		<div class="col2">
+			<h3>Deal of the Day</h3>
+			<h3 style="font-family: Segoe Print">DressBerry</h3><br>
+			<h4 style="font-family: Candara Light">Women Maroon Analogue Watch<br></h4>
+			<p style="font-family: Candara Light; font-size: 25px">&#8377 1,154<span style="text-decoration: line-through;"> &#8377 3,299.00</span><span style="color:#c4547a"> (65% OFF)</span><br>Analogue, Textured round stainless steel dial, Rose Gold-Toned bracelet style, metal strap, Water Resistant</p>
+			<button type="button" class="button_style add-latest-cart" onclick="alert('Item is added to Cart')";>Add to Cart</button>&emsp;
+				<div class="wishlist">
+						<i class="fa fa-thumbs-up add-wishlist" onclick="alert('Added to wishlist')"></i>
+				</div>
+		</div>
+	</div><br><br>
+
+	<hr style="height:1.5px;border-width:0;background-color:#AC3861;margin-left: 100px;margin-right: 100px;"><br>
+
+
+	 <!----------------------FAQ section---------------------------->
+	<section>
+		<h2 class="faq-title" style="font-size: 35px;color: #123C69;">Frequently Asked Questions</h2>
+		<div class="faq">
+			<div class="question">
+				<p style="font-size: 20px">How do I purchase a gift card?</p>
+				<svg width="15" height="10" viewBox="0 0 42 25">
+					<path d="M3 3L21 21L39 3" stroke="black" stroke-width="7"></path>
+				</svg>
+			</div>
+			<div class="ans">
+				<p>Purchasing gift vouchers online is very simple. At the purchase screen, you just have to enter the name and address of the person you want to send the Flipkart gift card to. Then, select the value of the card you would like to purchase and click, 'Proceed To Pay'. You can then pay using a credit card, debit card, or net banking. After the checkout process, you will receive an email with the Gift card details.</p>
+			</div>
+		</div>
+
+		<div class="faq">
+			<div class="question">
+				<p style="font-size: 20px">How do I return an item?</p>
+				<svg width="15" height="10" viewBox="0 0 42 25">
+					<path d="M3 3L21 21L39 3" stroke="black" stroke-width="7"></path>
+				</svg>
+			</div>
+			<div class="ans">
+				<p>Go to Your Orders. (ensure you have signed in before) Choose an item that you want to return or replace. Select a reason from menu and continue.</p>
+			</div>
+		</div>
+
+		<div class="faq">
+			<div class="question">
+				<p style="font-size: 20px">What are my delivery options?</p>
+				<svg width="15" height="10" viewBox="0 0 42 25">
+					<path d="M3 3L21 21L39 3" stroke="black" stroke-width="7"></path>
+				</svg>
+			</div>
+			<div class="ans">
+				<p>Your estimated delivery date will always be made clear before you check out.</p>
+			</div>
+		</div>
+	</section>
+
+    <!---------------------------Form------------------------------>
+	<div class="container1">
+	  <img src="ask.png" style="width: 100%;height: 700px;opacity: 0.6;margin-bottom: 0px">
+	  <div class="login"><br>
+	  	<form id="ask" action="query.php" method="post">
+	  		<h3 style="color: white">Have any questions?</h3><br><br>
+		  	<input type="mail" name="e_mail" id="e_mail" placeholder="Email id" required><br><br><br>
+		  	<textarea name="enter_query" id="enter_query" placeholder="Type here..." rows="4" cols="38" required></textarea><br><br><br>
+		  	<button class="button_style" id="submit_query" name="submit_query">Submit</button><br><br>
+	  	</form>
+	  </div>
+	</div>
+
+ 
+
+
+	<!---------------- Footer --------------->
+	<div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                        	<li><a href="#">Best quality products</a></li>
+                            <li><a href="#">World wide shipping</a></li>
+                            <li><a href="#">Easy 30 days return</a></li>
+                            <li><a href="#">Money back guarantee</a></li>
+                            <li><a href="#">Delivery in 7 days</a></li>
+                        </ul><br>
+                    </div>
+                    <div class="col-md-3 item">
+                        <h3>Contact Info</h3>
+                        <ul style="opacity:0.6;">
+                        	<li><a href=""><i class="fa fa-map-marker fa-2x"></i></a>&emsp; MyFashion - Fashion store, Paris</li><br>
+                            <li><a href=""><i class="fa fa-envelope fa-2x"></i></a>&emsp;myfashion@company.com</li><br>
+                            <li><a href=""><i class="fa fa-phone fa-2x"></i></a>&emsp;111-111-1111</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 item text">
+                    	<br>
+                        <h3>MyFashion</h3>
+                        <p style="opacity:0.6;margin-bottom:0;">Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p><br>
+                    </div>
+                    <div class="col item social">
+                    	<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                    	<a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                    	<a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div><br>
+                <p style="opacity:0.3;text-align: center;font-style: italic;">Copyright 2021 - DC</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="faq.js"></script>
+    <script src="login.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
