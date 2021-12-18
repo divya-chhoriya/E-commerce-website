@@ -1,6 +1,6 @@
 # E-commerce-website
 Website made using HTML5, CSS, Javascript & PHP<br>
-[Link to website](http://myfashion.42web.io/login_home.html)
+🔗[Link to website](http://myfashion.42web.io/login_home.html)
 
 ### Features:
 * A login page, e-commerce home page, women’s & men’s section page, home decor page, cart page and payment page.
