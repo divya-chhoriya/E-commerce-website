@@ -3,7 +3,7 @@ Website made using HTML5, CSS, Javascript & PHP<br>
 🔗[Link to website](http://myfashion.42web.io/login_home.html)
 
 ### Features:
-* A login page, e-commerce home page, women’s & men’s section page, home decor page, cart page and payment page.
+* A login page, e-commerce home page, women’s & men’s section page, home decor page, and cart page.
 * On clicking the cart icon it will take you to the cart page.
 * Clicking on images will show you the product description in a modal box.
 * Hovering over images of products shows you the "Add to Cart" button and add to wishlist icon.
